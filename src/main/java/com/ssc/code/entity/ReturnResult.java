@@ -4,6 +4,9 @@ public class ReturnResult<T> {
 
     private String msg;
 
+    /**
+     * 0-success, 1-failure
+     */
     private String tag;
 
     private T data;
