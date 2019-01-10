@@ -15,6 +15,8 @@ public class User implements Serializable {
 
     private String passWord;
 
+    private Integer uType;
+
     public String getId() {
         return id;
     }
@@ -37,5 +39,13 @@ public class User implements Serializable {
 
     public void setPassWord(String passWord) {
         this.passWord = passWord;
+    }
+
+    public Integer getuType() {
+        return uType;
+    }
+
+    public void setuType(Integer uType) {
+        this.uType = uType;
     }
 }
