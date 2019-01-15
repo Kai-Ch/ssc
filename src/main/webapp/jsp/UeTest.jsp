@@ -11,6 +11,9 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- jQuery -->
+    <script type="text/javascript" src="../plugin/jquery-1.9.1/jquery.js"/>
+
     <!-- 配置文件 -->
     <script type="text/javascript" src="../plugin/ue/ueditor.config.js"></script>
     <!-- 编辑器源码文件 -->
