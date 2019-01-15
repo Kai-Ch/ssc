@@ -21,7 +21,7 @@ public class TestController {
 
     @RequestMapping("/test")
     @ResponseBody
-    public ReturnResult test(){
+    public ReturnResult test() {
         log.info("test------");
         Test test = iTestService.test();
         ReturnResult returnResult = new ReturnResult();
@@ -31,14 +31,9 @@ public class TestController {
     }
 
     @RequestMapping("/welcome")
-    public String welcome(){
+    public String welcome() {
         System.out.println("2222");
         return "welcome";
     }
 
-    @RequestMapping("/uet")
-    public String uet(){
-        System.out.println("2222");
-        return "UeTest";
-    }
 }
