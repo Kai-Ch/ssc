@@ -35,4 +35,10 @@ public class TestController {
         System.out.println("2222");
         return "welcome";
     }
+
+    @RequestMapping("/uet")
+    public String uet(){
+        System.out.println("2222");
+        return "UeTest";
+    }
 }
