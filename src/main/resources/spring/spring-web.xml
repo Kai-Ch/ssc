@@ -32,4 +32,35 @@
 
     <!-- 4.扫描web相关的bean -->
     <context:component-scan base-package="com.ssc.code.web"/>
+
+    <!--&lt;!&ndash; 配置HttpMessageConverter的使用类型转换器 &ndash;&gt;-->
+    <!--<bean id="jsonConverter" class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">-->
+        <!--<property name="supportedMediaTypes">-->
+            <!--<list>-->
+                <!--<value>text/plain;charset=UTF-8</value>-->
+                <!--<value>text/html;charset=UTF-8</value>-->
+                <!--<value>application/json;charset=UTF-8</value>-->
+                <!--<value>application/x-www-form-urlencoded</value>-->
+            <!--</list>-->
+        <!--</property>-->
+    <!--</bean>-->
+
+    <!--&lt;!&ndash; 内容谈判视图解析器 &ndash;&gt;-->
+    <!--<bean class="org.springframework.web.servlet.view.ContentNegotiatingViewResolver">-->
+        <!--<property name="defaultViews">-->
+            <!--<list>-->
+                <!--&lt;!&ndash; MappingJacksonJsonView 解析返回JSON数据 &ndash;&gt;-->
+                <!--<bean class="org.springframework.web.servlet.view.json.MappingJackson2JsonView" />-->
+            <!--</list>-->
+        <!--</property>-->
+    <!--</bean>-->
+
+    <!--<bean id="contentNegotiationManager" class="org.springframework.web.accept.ContentNegotiationManagerFactoryBean">-->
+        <!--<property name="mediaTypes">-->
+            <!--<value>-->
+                <!--json=application/json-->
+                <!--xml=application/xml-->
+            <!--</value>-->
+        <!--</property>-->
+    <!--</bean>-->
 </beans>

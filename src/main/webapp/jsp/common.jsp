@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
-  User: KaiCH
-  Date: 2019/1/10
-  Time: 9:52
+  User: KaiCh
+  Date: 2019/1/16
+  Time: 15:45
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -11,16 +11,11 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- bootstrap -->
+    <script type="text/javascript" src="../plugin/bootstrap-3.3.7/js/bootstrap.js"/>
     <title>Insert title here</title>
 </head>
 <body>
-<div id="">
-    <form>
-        <input type="text" name="">
-        <input type="text" name="">
-        <input type="submit">
-    </form>
 
-</div>
 </body>
 </html>

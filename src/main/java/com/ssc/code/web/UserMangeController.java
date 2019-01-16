@@ -5,6 +5,7 @@
  */
 package com.ssc.code.web;
 
+import com.alibaba.fastjson.JSON;
 import com.ssc.code.entity.ReturnResult;
 import com.ssc.code.entity.User;
 import com.ssc.code.service.IUserService;
@@ -41,6 +42,7 @@ public class UserMangeController {
     @PostMapping("/checkUser")
     @ResponseBody
     public ReturnResult<User> check(@RequestBody User user){
+        logeer.info("checkUser params :{}", JSON.toJSONString(user));
         ReturnResult<User> returnResult = new ReturnResult<User>();
         return iUserService.check(user, returnResult);
     }
