@@ -40,4 +40,18 @@ public class UserServiceImpl implements IUserService {
     public User getById(String id) {
         return userMapper.getById(id);
     }
+
+    @Override
+    public ReturnResult<User> check(User user, ReturnResult<User> returnResult) {
+        logger.info("check -----");
+        boolean exist = userMapper.checkExist(user);
+        if(exist){
+            user = userMapper.selectUser(user);
+            returnResult.setTag(Constant.SUCCESS);
+            returnResult.setData(user);
+        }else {
+            returnResult.setTag(Constant.FAILURE);
+        }
+        return returnResult;
+    }
 }

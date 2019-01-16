@@ -13,4 +13,6 @@ public interface IUserService {
     public ReturnResult<User> add(User user);
 
     public User getById(String id);
+
+    ReturnResult<User> check(User user, ReturnResult<User> returnResult);
 }

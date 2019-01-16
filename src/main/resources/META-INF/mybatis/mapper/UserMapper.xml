@@ -19,4 +19,8 @@
 	<select id="getById" parameterType="java.lang.String" resultMap="UserMap">
 		SELECT * FROM user WHERE id=#{id}
 	</select>
+
+	<select id="selectUser" parameterType="com.ssc.code.entity.User" resultMap="UserMap">
+		SELECT * FROM user WHERE unm=#{userName} AND pwd=#{passWord}
+	</select>
 </mapper>

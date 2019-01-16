@@ -11,13 +11,8 @@ import com.ssc.code.service.IUserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
-
-import java.net.URI;
 
 @Controller
 @RequestMapping("/user")
@@ -34,6 +29,20 @@ public class UserMangeController {
         logeer.info("user ----- add");
         ReturnResult<User> returnResult = iUserService.add(user);
         return returnResult;
+    }
+
+    @PostMapping("/login")
+    @ResponseBody
+    public ReturnResult<User> login(@RequestBody User user){
+
+        return null;
+    }
+
+    @PostMapping("/checkUser")
+    @ResponseBody
+    public ReturnResult<User> check(@RequestBody User user){
+        ReturnResult<User> returnResult = new ReturnResult<User>();
+        return iUserService.check(user, returnResult);
     }
 
     @GetMapping("/{id}")
