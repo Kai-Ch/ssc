@@ -1,26 +1,22 @@
 <%--
   Created by IntelliJ IDEA.
-  User: KaiCH
-  Date: 2019/1/10
-  Time: 9:52
+  User: DELL
+  Date: 2018/12/11
+  Time: 21:10
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8" %>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<c:set var="ctx" value="${pageContext.request.contextPath}" />
 <html>
 <head>
+    <jsp:include page="../common.jsp" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Insert title here</title>
 </head>
 <body>
-<div id="">
-    <form>
-        <input type="text" name="">
-        <input type="text" name="">
-        <input type="submit">
-    </form>
-
-</div>
+        sing.jsp
 </body>
+    <script type="text/javascript" src="${ctx}/js/um/sing.js"></script>
 </html>

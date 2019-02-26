@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/user")
 public class UserMangeController {
 
-    private Logger logeer = LoggerFactory.getLogger(UserMangeController.class);
+    private Logger logger = LoggerFactory.getLogger(UserMangeController.class);
 
     @Autowired
     private IUserService iUserService;
@@ -27,9 +27,15 @@ public class UserMangeController {
     @PostMapping
     @ResponseBody
     public ReturnResult<User> add(@RequestBody User user){
-        logeer.info("user ----- add");
+        logger.info("user ----- add");
         ReturnResult<User> returnResult = iUserService.add(user);
         return returnResult;
+    }
+
+    @RequestMapping("/register")
+    public String toSing(){
+        logger.info("register");
+        return "register";
     }
 
     @PostMapping("/login")
@@ -42,7 +48,7 @@ public class UserMangeController {
     @PostMapping("/checkUser")
     @ResponseBody
     public ReturnResult<User> check(@RequestBody User user){
-        logeer.info("checkUser params :{}", JSON.toJSONString(user));
+        logger.info("checkUser params :{}", JSON.toJSONString(user));
         ReturnResult<User> returnResult = new ReturnResult<User>();
         return iUserService.check(user, returnResult);
     }
@@ -50,9 +56,9 @@ public class UserMangeController {
     @GetMapping("/{id}")
     @ResponseBody
     public User getById(@PathVariable String id){
-        logeer.info("get ------ user ---- id ");
+        logger.info("get ------ user ---- id ");
         User user = iUserService.getById(id);
-        logeer.info("user : {}");
+        logger.info("user : {}");
         return user;
     }
 }
